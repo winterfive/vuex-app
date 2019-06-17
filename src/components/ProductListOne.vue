@@ -12,12 +12,9 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
   computed: {
     products() {
-      return this.$store.products;
+      return this.$store.state.products;
     }
   }
 };

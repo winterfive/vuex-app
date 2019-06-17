@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <product-list-one></product-list-one>
-    <product-list-two></product-list-two>
+    <product-list-one />
+    <product-list-two />
   </div>
 </template>
 
