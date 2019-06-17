@@ -8,7 +8,13 @@
       </li>
     </ul>
     <div>
-      <v-btn small class="deep-purple darken-3" dark>Reduce Price</v-btn>
+      <v-btn
+        v-on:click="this.$store.state.reducePrice"
+        small
+        class="deep-purple darken-3"
+        dark
+        >Reduce Price</v-btn
+      >
     </div>
   </div>
 </template>
