@@ -7,7 +7,9 @@
         <span class="price"> ${{ product.price }}</span>
       </li>
     </ul>
-    <button v-on:click="reducePrice" class="success"></button>
+    <div>
+      <v-btn small class="deep-purple darken-3" dark>Reduce Price</v-btn>
+    </div>
   </div>
 </template>
 
@@ -53,5 +55,9 @@ export default {
 .price {
   font-weight: bold;
   color: black;
+}
+
+.v-btn {
+  margin-top: 18px;
 }
 </style>
