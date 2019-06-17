@@ -2,11 +2,20 @@
   <div class="product-list-one">
     <h2>Product List One</h2>
     <ul>
-      <li v-for="product in products" v-bind:key="product.name">
+      <li v-for="product in saleProducts" v-bind:key="product.name">
         <span class="name">{{ product.name }}</span>
         <span class="price"> ${{ product.price }}</span>
       </li>
     </ul>
+    <div>
+      <v-btn
+        v-on:click="this.$store.state.reducePrice"
+        small
+        class="deep-purple darken-3"
+        dark
+        >Reduce Price</v-btn
+      >
+    </div>
   </div>
 </template>
 
@@ -15,6 +24,16 @@ export default {
   computed: {
     products() {
       return this.$store.state.products;
+    },
+    saleProducts() {
+      return this.$store.getters.saleProducts;
+    }
+  },
+  methods: {
+    reducePrice: function() {
+      this.$store.state.products.array.forEach(product => {
+        product.price -= 1;
+      });
     }
   }
 };
@@ -42,5 +61,9 @@ export default {
 .price {
   font-weight: bold;
   color: black;
+}
+
+.v-btn {
+  margin-top: 18px;
 }
 </style>
