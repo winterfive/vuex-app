@@ -2,23 +2,26 @@
   <div class="product-list-one">
     <h2>Product List One</h2>
     <ul>
-      <li v-for=""></li>
+      <li v-for="product in products" v-bind:key="product.name">
+        <span class="name">{{ product.name }}</span>
+        <span class="price"> ${{ product.price }}</span>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
+  props: ["products"],
   data() {
     return {};
   }
 };
 </script>
 
-<style lang="scss">
-#product-list-one {
-  background: yellow;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 2);
+<style lang="scss" scoped>
+.product-list-one {
+  background: #7f81e2;
   margin-bottom: 30px;
   padding: 10px 20px;
 }
@@ -32,11 +35,11 @@ export default {
   margin-right: 10px;
   margin-top: 10px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .price {
   font-weight: bold;
-  color: blue;
+  color: black;
 }
 </style>
