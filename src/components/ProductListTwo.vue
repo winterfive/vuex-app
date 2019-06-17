@@ -12,9 +12,10 @@
 
 <script>
 export default {
-  props: ["products"],
-  data() {
-    return {};
+  computed: {
+    products() {
+      return this.$store.state.products;
+    }
   }
 };
 </script>
@@ -31,7 +32,7 @@ export default {
 }
 
 .product-list-two li {
-  display: inline-block;
+  display: block;
   margin-right: 10px;
   margin-top: 10px;
   padding: 20px;
