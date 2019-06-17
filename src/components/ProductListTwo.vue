@@ -31,7 +31,7 @@ export default {
 }
 
 .product-list-two li {
-  display: inline-block;
+  display: block;
   margin-right: 10px;
   margin-top: 10px;
   padding: 20px;

@@ -16,14 +16,7 @@ export default {
   },
   name: "app",
   data() {
-    return {
-      products: [
-        { name: "Banana", price: 20 },
-        { name: "Tomatoes", price: 30 },
-        { name: "Cherries", price: 15 },
-        { name: "Corn", price: 25 }
-      ]
-    };
+    return {};
   }
 };
 </script>
