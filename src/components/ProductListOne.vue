@@ -27,13 +27,16 @@ export default {
   },
   methods: {
     reducePrice: function() {
-      this.$store.commit("reducePrice");
+      this.$store.dispatch("reducePrice");
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+li {
+  width: 160px;
+}
 .product-list-one {
   background: #7f81e2;
   margin-bottom: 30px;
