@@ -26,11 +26,11 @@ export default {
     }
   },
   methods: {
-    reducePrice: function() {
+    /* reducePrice: function() {
       this.$store.state.products.forEach(product => {
         product.price -= 1;
       });
-    }
+    } */
   }
 };
 </script>
