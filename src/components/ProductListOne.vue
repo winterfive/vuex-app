@@ -8,27 +8,25 @@
       </li>
     </ul>
     <div>
-      <v-btn v-on:click="reducePrice" class="deep-purple darken-3" dark
-        >Reduce Price</v-btn
+      <v-btn v-on:click="reducePrice(2)" class="deep-purple darken-3" dark
+        >Reduce Price by $2</v-btn
       >
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   computed: {
     products() {
       return this.$store.state.products;
     },
-    saleProducts() {
-      return this.$store.getters.saleProducts;
-    }
+    ...mapGetters(["saleProducts"])
   },
   methods: {
-    reducePrice: function() {
-      this.$store.dispatch("reducePrice");
-    }
+    ...mapActions(["reducePrice"])
   }
 };
 </script>
@@ -62,6 +60,5 @@ li {
 
 .v-btn {
   margin-top: 18px;
-  width: 130px;
 }
 </style>
