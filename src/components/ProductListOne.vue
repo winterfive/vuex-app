@@ -8,11 +8,7 @@
       </li>
     </ul>
     <div>
-      <v-btn
-        v-on:click="this.$store.state.reducePrice"
-        small
-        class="deep-purple darken-3"
-        dark
+      <v-btn v-on:click="reducePrice" class="deep-purple darken-3" dark
         >Reduce Price</v-btn
       >
     </div>
@@ -31,7 +27,7 @@ export default {
   },
   methods: {
     reducePrice: function() {
-      this.$store.state.products.array.forEach(product => {
+      this.$store.state.products.forEach(product => {
         product.price -= 1;
       });
     }
