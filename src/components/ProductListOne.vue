@@ -8,11 +8,7 @@
       </li>
     </ul>
     <div>
-      <v-btn
-        v-on:click="this.$store.state.reducePrice"
-        small
-        class="deep-purple darken-3"
-        dark
+      <v-btn v-on:click="reducePrice" class="deep-purple darken-3" dark
         >Reduce Price</v-btn
       >
     </div>
@@ -31,15 +27,16 @@ export default {
   },
   methods: {
     reducePrice: function() {
-      this.$store.state.products.array.forEach(product => {
-        product.price -= 1;
-      });
+      this.$store.dispatch("reducePrice");
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+li {
+  width: 160px;
+}
 .product-list-one {
   background: #7f81e2;
   margin-bottom: 30px;
@@ -65,5 +62,6 @@ export default {
 
 .v-btn {
   margin-top: 18px;
+  width: 130px;
 }
 </style>
