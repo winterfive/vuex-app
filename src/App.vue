@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <product-list-one />
-    <product-list-two />
-  </div>
+  <v-app>
+    <div id="app">
+      <product-list-one />
+      <product-list-two />
+    </div>
+  </v-app>
 </template>
 
 <script>
