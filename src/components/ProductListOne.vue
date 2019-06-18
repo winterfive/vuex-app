@@ -26,11 +26,9 @@ export default {
     }
   },
   methods: {
-    /* reducePrice: function() {
-      this.$store.state.products.forEach(product => {
-        product.price -= 1;
-      });
-    } */
+    reducePrice: function() {
+      this.$store.commit("reducePrice");
+    }
   }
 };
 </script>
@@ -61,5 +59,6 @@ export default {
 
 .v-btn {
   margin-top: 18px;
+  width: 130px;
 }
 </style>
